@@ -1,0 +1,1147 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+*
+{
+	margin: 0;
+  	padding: 0;
+  	-webkit-box-sizing: border-box;
+  	        box-sizing: border-box;
+}
+
+a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover
+{
+	color: red;
+}
+
+h1, h2, h3
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li
+{
+	list-style: none;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+/*Général*/
+
+html
+{
+	height: 100%;
+}
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100%;
+  	margin-top: 0px;
+  	margin-bottom: 140px;
+	margin-left: 0px;
+	margin-right: 0px;
+  	position: relative;
+}
+
+.warning
+{
+	font-weight: bold;
+	color: red;	
+}
+
+.fields
+{
+	border: groove 3px red;
+	border-radius: 10px;
+	text-align: center;
+	-webkit-box-shadow:2px 2px 2px 1px red;
+	        box-shadow:2px 2px 2px 1px red;
+	width: 150px;
+	font-family: "Verdana";
+	font-size: 16px;
+	padding: 2px;
+	margin: 5px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.comm_field, .contact_field
+{
+	border: groove 3px red;
+	border-radius: 10px;
+	text-align: left;
+	-webkit-box-shadow:2px 2px 2px 1px red;
+	        box-shadow:2px 2px 2px 1px red;
+	width: 275px;
+	font-family: "Verdana";
+	font-size: 16px;
+	padding: 2px;
+	margin: 5px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+}
+
+.cookies_accept
+{
+	border-bottom: groove 3px red;
+	border-top: groove 3px red;
+	font-family: "verdana";
+	padding: 60px;
+	font-size: 20px;
+	background-color: #EEEEEE;
+	color: #333;
+	position: fixed;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	    -ms-transform: translateX(-50%) translateY(-50%);
+	        transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	top: 50%;
+	left: 50%;
+}
+
+/*Header et Footer*/
+
+.header
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	border-bottom: groove 3px red;
+	position: fixed;
+	font-family: "verdana";
+	font-size: 16px;
+	padding: 5px;
+	width: 100%;
+	top: 0;
+	background-color: #EEEEEE;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.logo
+{
+	width: 18%;
+}
+
+.header_logo
+{
+	width: 35%;
+	padding-left: 15px;
+	text-align: left;
+}
+
+.logo_user
+{
+	width: 30px;
+	vertical-align: middle;
+}
+
+.logo_txt_user
+{
+	align-items: center;
+}
+
+.header_username
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.under_header_space
+{
+	height: 150px;
+}
+
+footer
+{
+	border-top: groove 3px red;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: #EEEEEE;
+	padding-bottom: 10px;
+}
+
+.footer_center
+{
+	text-align: center;
+	padding: 15px;
+}
+
+/* pages Connexion / création de compte / mot de passe oublié / gestion de compte*/
+
+.index_logo, .logo_index
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	width:auto;
+
+}
+.signup_link, .reset_link, .bonjour, .signup_txt
+{
+	font-family: "verdana";
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+	padding: 5px;
+	text-align: center;
+}
+
+.vide
+{
+    color: red
+}
+
+.login
+{
+	border-bottom: groove 3px red;
+	border-top: groove 3px red;
+	font-family: "verdana";
+	padding: 10px;
+	font-size: 18px;
+	background-color: #EEEEEE;
+	color: #333;
+	text-align: center;
+}
+
+.form_lostpwd
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.form_lostpwd_bloc
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	border: groove 3px red;
+	border-radius: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.user_title
+{
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 5px;
+}
+
+.user_details
+{
+	border: groove 3px red; 
+	padding: 20px;
+	font-size: 17px;
+	background-color: #EEEEEE;
+	color: #333;
+	border-radius: 10px;
+}
+
+.user_info
+{
+	padding: 5px;
+}
+
+.user_page_center
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.form_change
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 20px;
+}
+
+.change_fields
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 0px;
+	border: groove 3px red;
+	border-radius: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.modif_success
+{
+	margin-top: 0px;
+	font-weight: 600;
+	color: green;
+}
+
+.error_signup
+{
+	margin-top: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+}
+
+.inscription
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;	
+}
+
+.signup_explanation
+{
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+	color: #999;
+	padding: 10px;
+}
+
+.form_inscription
+{
+	border: groove 3px red;
+	padding-right: 5px; 
+	padding-left: 5px; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	background-color: #EEEEEE;
+	color: #333;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.signup_txt
+{
+	text-align: center;
+}
+
+.retour_accueil
+{
+	padding-top: 10px;
+	text-align: center;
+}
+
+/*Acteurs et Details Acteur*/
+
+.acteurs, .acteur
+{
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px 10px 10px 10px;
+	color: #333;
+}
+
+/* taille des logos bancaires */
+.logo_banques
+{
+	border: groove 4px red;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 10px 10px 10px 10px;
+	width: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+
+.logo_bnp, .logo_bpce, .logo_ca, .logo_cm, .logo_cic, .logo_sg, .logo_bp
+{
+	width: 90%;
+}
+/* Home*/
+.txt_presentation
+{
+	font-family: "Verdana";
+	font-size: 15px;
+	font-weight: 600;
+	color: #333;
+	width: 100%;
+	text-align: center;
+	padding: 8px;
+	border-bottom: groove 3px red;
+
+}
+
+.txt_pres_acteur
+{
+	font-family: "Verdana";
+	font-size: 15px;
+	font-weight: 600;
+	color: #333;
+	width: 100%;
+	text-align: center;
+	padding: 8px;
+	margin: 8px;
+}
+
+.acteurs
+{
+	background-color: #CCC;
+}
+
+.acteur
+{
+	font-size: 18px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: #FFFFFF;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 0px;
+	        flex: 1 1 0;
+}
+
+.logo_acteur_liste
+{
+	width: 800px;
+	border-radius:8px;
+}
+
+.texte_acteur
+{
+	width: 100%;
+	text-align: left;
+}
+
+.lire_suite
+{
+	bottom: 0;
+}
+
+.bouton_lire_suite
+{
+	float: right;
+}
+
+.logo_acteur_img
+{
+	width: 25%;
+	border-radius:10px;
+	padding: 5px;
+}
+
+.logo_acteur_detail_img
+{
+	width: 30%;
+	border-radius:10px;
+	padding: 5px;
+}
+
+.likedislike_count
+{
+	font-style:oblique;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: oblique;
+	font-family: "Verdana";
+	color: #333;
+	background-color: #EEEEEE;
+	width: 35px;
+	text-align: center;
+	border-radius: 40px;
+}
+
+.detail_acteur
+{
+	border: groove 2px red;
+	padding: 10px;
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px 10px 10px 10px;
+	color: #333;
+}
+
+.header_comm
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-top: groove 3px red;
+	border-bottom: groove 3px red;
+	background-color: #EEEEEE;
+}
+
+.txt_commentaires
+{
+	margin-right: 30px;
+	font-size: 20px;
+	color: #333;
+}
+
+.comm_flex
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.right_buttons
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.comm_button
+{
+	width: 180px;
+	height: 54px;
+ 	font-size: 15px;
+ 	-webkit-box-shadow:2px 2px 2px 1px red;
+ 	        box-shadow:2px 2px 2px 1px red;
+ 	cursor:pointer;
+ 	background-color: white;
+ 	border-radius: 20px;
+}
+
+.bouton_modifier, .form_button
+{
+	width: auto;
+	padding-right: 5px;
+	padding-left: 5px;
+ 	margin: 5px;
+ 	font-size: 15px;
+ 	-webkit-box-shadow:2px 2px 2px 1px red;
+ 	        box-shadow:2px 2px 2px 1px red;
+ 	cursor:pointer;
+ 	background-color: white;
+ 	border-radius: 8px;
+}
+
+.count_comm
+{
+	font-style: oblique;
+	font-weight: 600;
+	font-family: "Verdana";
+	font-size: 18px;
+	color: #333;
+	background-color: white;
+	width: 100%;
+	text-align: center;
+	border: groove 3px red;
+	border-radius: 40px;
+}
+
+.pouce_vert, .pouce_rouge
+{
+	width: 17%;
+}
+
+.vote
+{
+	border: groove 3px red;
+	border-radius: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 180px;
+	background-color: white;
+}
+
+.comm_individuel
+{
+	border-top: groove red 3px;
+	border-bottom: groove red 3px;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 10px 10px 10px 10px;
+	color: #333;
+	background-color: #EEEEEE;
+	-ms-flex-negative: 1;
+	    flex-shrink: 1;
+	width: 50%;
+}
+
+/* textes de loi*/
+
+.txt_loi
+{
+	border: groove 2px red;
+	padding: 20px;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	margin-right: 30px;
+	margin-left: 30px;
+	border-radius: 10px 10px 10px 10px;
+	color: #333;
+}
+
+/* Formulaire */
+
+.contact_title
+{
+	margin-top: 0px;
+	text-align: center;
+	font-size: 25px;
+}
+
+.field_coordinate ,.field_message
+{
+	width: 20%;
+	border: groove 3px red; 
+	border-radius: 8px;
+	background-color: #EEEEEE;
+	padding: 30px;
+	margin: 10px;
+}
+
+.rgbd
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.captcha_txt
+{
+	padding-bottom: 10px;
+}
+
+.captcha
+{
+	border: groove 3px red; 
+	border-radius: 8px;
+	width: 20px;
+}
+
+.form_ok
+{
+	color: green;
+	font-family:  "verdana";
+}
+
+/*Case à cocher formulaire*/
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+input[type=checkbox] {
+    -border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 3px groove red;
+    border-radius: 2px;
+}
+input[type=checkbox]:hover {
+    -border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 3px groove #01D758;
+    border-radius: 5px;
+}
+input[type=checkbox]:checked {
+  	background: #01D758;
+}
+
+@media screen and (max-width: 767px) {
+	/*  Header  */
+	.header
+	{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	position: relative;
+	font-size: 14px;
+	}
+	.under_header_space
+	{
+		height: 10px;
+	}
+	.logo
+	{
+		width: 40%;
+	}
+
+	.header_logo
+	{
+		width: auto;
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	.logo_user
+	{
+		width: 30px;
+		padding-right: 5px;
+	}
+
+	.header_username
+	{
+		text-align: center;
+		padding-right: 0px;
+	}
+
+	/*  Footer  */
+
+	footer
+	{
+	padding: 10px;
+	}
+
+	.footer_center
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;		
+		text-align: center;
+		padding: 5px;
+	}
+	.signup_explanation
+	{
+		font-size: 12px;
+		text-align: left;
+	}
+	.form_inscription
+	{
+		font-size: 14px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	/*Acteurs et Details Acteur*/
+	/* taille des logos bancaires */
+	.logo_banques
+	{
+		margin-right: 0px;
+		margin-left: 0px;
+		border: groove 2px red;
+		padding: 5px;
+		width: 100%;
+	}
+
+	/* Home*/
+	.txt_presentation
+	{
+		font-size: 12px;
+		margin-left: 8px;
+		margin-right: 8px;
+		width: auto;
+		text-align: justify;
+	}
+
+	.txt_pres_acteur
+	{
+		font-size: 12px;
+		width: auto;
+		text-align: justify;
+	}
+
+	.acteur
+	{
+		font-size: 12px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	    	-ms-flex-direction: column;
+	        	flex-direction: column;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 1 0px;
+		        flex: 1 1 0;
+	}
+
+	.logo_acteur_liste
+	{
+		width: 100%;
+		border-radius:8px;
+	}
+
+	.texte_acteur
+	{
+		width: 100%;
+		text-align: left;
+	}
+
+	.logo_acteur_img
+	{
+		width: 100%;
+		border-radius:10px;
+		padding: 5px;
+	}
+	/*  Détails acteurs  */
+	.logo_acteur_detail_img
+	{
+		width: 100%;
+	}
+
+	.likedislike_count
+	{
+		font-style:oblique;
+		font-size: 18px;
+		font-weight: 600;
+		font-style: oblique;
+		font-family: "Verdana";
+		color: #333;
+		background-color: #EEEEEE;
+		width: 35px;
+		text-align: center;
+		border-radius: 40px;
+	}
+
+	.detail_acteur
+	{
+		border: groove 2px red;
+		padding: 10px;
+		margin-top: 0px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		border-radius: 10px 10px 10px 10px;
+		color: #333;
+	}
+
+	.header_comm
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	    	-ms-flex-direction: column;
+	        	flex-direction: column;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	
+	.right_buttons
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	    	-ms-flex-direction: column;
+	        	flex-direction: column;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	}
+
+	.txt_commentaires
+	{
+		margin-right: 0px;
+		font-size: 20px;
+		color: #333;
+	}
+
+	.comm_flex
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+
+	.comm_button
+	{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.pouce_vert, .pouce_rouge
+	{
+		width: 17%;
+	}
+
+	.vote
+	{
+		margin-top: 5px;
+		-webkit-box-shadow:2px 2px 2px 1px red;
+ 	    box-shadow:2px 2px 2px 1px red;
+	}
+
+	.comm_individuel
+	{
+		margin: 10px;
+		width: auto;
+	}
+
+	/* textes de loi*/
+
+	.txt_loi
+	{
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	
+	.field_coordinate ,.field_message
+	{
+		width: 30%;
+		padding-bottom: 20px;
+		padding-right: 30px;
+		padding-left: 30px;
+		margin: 10px;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+		/*  Header  */
+		.header
+		{
+		font-size: 14px;
+		}
+		.under_header_space
+		{
+			height: 150px;
+		}
+		.logo
+		{
+			width: 40%;
+		}
+
+		.header_logo
+		{
+			width: auto;
+			padding-left: 0px;
+			text-align: left;
+		}
+
+		.logo_user
+		{
+			width: 25px;
+		}
+
+		.header_username
+		{
+			-webkit-box-align: right;
+			    -ms-flex-align: right;
+			        align-items: flex-end;
+			text-align: right;
+			padding-right: 10px;
+
+		}
+		.signup_explanation
+		{
+			font-size: 12px;
+			text-align: left;
+		}
+		/*Acteurs et Details Acteur*/
+		/* taille des logos bancaires */
+		.logo_banques
+		{
+			margin: 10px;
+			margin-left: 0px;
+			border: groove 2px red;
+			padding: 5px;		
+		}
+
+		/* Home*/
+		.txt_presentation
+		{
+			font-size: 12px;
+			margin-left: 8px;
+			margin-right: 8px;
+			width: auto;
+			text-align: justify;
+		}
+
+		.txt_pres_acteur
+		{
+			font-size: 12px;
+			width: auto;
+			text-align: justify;
+		}
+
+		.acteurs
+		{
+			background-color: #DDDDDD;
+		}
+
+		.acteur
+		{
+			font-size: 12px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+		.logo_acteur_liste
+		{
+			width: 100%;
+			border-radius:8px;
+		}
+
+		.texte_acteur
+		{
+			width: 100%;
+			text-align: left;
+		}
+
+		.logo_acteur_img
+		{
+			width: 100%;
+			border-radius:10px;
+			padding: 5px;
+		}
+		/*  Détails acteurs  */
+		.logo_acteur_detail_img
+		{
+			width: 100%;
+		}
+
+		.detail_acteur
+		{
+			border: groove 2px red;
+			padding: 10px;
+			margin-top: 15px;
+			margin-right: 20px;
+			margin-left: 20px;
+			margin-bottom: 20px;
+			border-radius: 10px 10px 10px 10px;
+			color: #333;
+		}
+
+		.header_comm
+		{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+		    	-ms-flex-direction: column;
+		        	flex-direction: column;
+		}
+
+		.vote
+		{
+			margin-top: 5px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+		.comm_flex
+		{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+		}
+
+		.comm_button
+		{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		.comm_individuel
+		{
+			margin: 10px;
+			width: auto;
+		}
+
+		/* textes de loi*/
+
+		.txt_loi
+		{
+			padding: 10px;
+			margin-top: 40px;
+		}
+
+		.field_coordinate ,.field_message
+		{
+			width: 30%;
+			padding-bottom: 20px;
+			padding-right: 30px;
+			padding-left: 30px;
+			margin: 10px;
+		}
+}
