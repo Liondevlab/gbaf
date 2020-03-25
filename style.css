@@ -631,7 +631,10 @@ footer
 	    flex-shrink: 1;
 	width: 50%;
 }
-
+.cke_form
+{
+	width: 50%;
+}
 /* textes de loi*/
 
 .txt_loi
@@ -658,6 +661,15 @@ footer
 .field_coordinate ,.field_message
 {
 	width: 20%;
+	border: groove 3px red; 
+	border-radius: 8px;
+	background-color: #EEEEEE;
+	padding: 30px;
+	margin: 10px;
+}
+.field_comm
+{
+	width: 35%;
 	border: groove 3px red; 
 	border-radius: 8px;
 	background-color: #EEEEEE;

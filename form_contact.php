@@ -54,7 +54,7 @@ include('cookies_accept.php');
                 $objet = htmlspecialchars($_POST['objet']); // Titre de l'email
                 $nom = htmlspecialchars($_POST['nom']); // Nom de l'utilisateur
                 $email = htmlspecialchars($_POST['email']); // email de l'utilisateur
-                $message = htmlspecialchars($_POST['message']); // Contenu du message de l'utilisateur
+                $message = $_POST['message']; // Contenu du message de l'utilisateur
             
             // Pour envoyer un email HTML, l'en-tête Content-type doit être défini
 
@@ -147,7 +147,20 @@ include('cookies_accept.php');
                  
                     <fieldset class="field_message"><legend>Votre message :</legend>
                         <p><label for="objet">Objet : <span style="color:#ff0000;">*</span> <br/> </label><input class="fields" type="text" id="objet" name="objet" placeholder="Objet..." /></p>
+                                <!-- (2): textarea will replace by CKEditor -->
                         <p><label for="message">Message : <span style="color:#ff0000;">*</span> <br/> </label><textarea class="contact_field" id="message" name="message" cols="30" rows="8" placeholder="Ecrivez votre message ici..."></textarea></p>
+                         <!-- (3): Javascript code to replace textarea with id='editor1' by CKEditor -->
+                        <div class="cke_form">
+                        <script>
+                 
+                            CKEDITOR.replace( 'message', {
+                            uiColor: '#FF0000',
+                            toolbar: [
+                               [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+                               [ 'FontSize', 'TextColor', 'BGColor' ]
+                            ]});
+                        </script>
+                        </div>
                     </fieldset>
                     <div class="rgbd">
                         <i><input type="checkbox" name="RGBD" id="RGBD" /></i> <label for="RGBD"> <span style="color:#ff0000;">*</span> J'accepte que mes données personnelles soient collectées</label> <br/>

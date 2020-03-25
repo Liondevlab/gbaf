@@ -70,14 +70,32 @@ include('cookies_accept.php');
                     if (isset($_POST['comm_button'])) {
                         ?>
                         <p>
-			<div align="center">
                        	<form align="center" id="commentaire" method="post" action="">
+                            <div align="center" class="cke_comm">
                                 <br/>
-                                <textarea class="comm_field" placeholder="Entrez votre commentaire ici..." name="commentaire" id="commentaire" rows="6" cols="50"></textarea><br/>
+                                <fieldset class="field_comm"><legend>Votre commentaire :</legend>
+                                <div>
+                                    
+                                </div>
+                                <div>
+                                <textarea class="comm_field" placeholder="Entrez votre commentaire ici..." name="commentaire" id="comm" rows="6" cols="50"></textarea><br/>
+                                    <script>
+                                        CKEDITOR.replace( 'comm', {
+                                        uiColor: '#FF0000',
+                                        toolbar: [
+                                           [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+                                           [ 'FontSize', 'TextColor', 'BGColor' ]
+                                        ]});
+                                    </script>
+                                </div>
+                                <div>
+                                    
+                                </div>
+                                </fieldset>
                                 <input type="hidden" name="id_acteur" id="id_acteur" value="<?php echo $donnees['id_acteur']; ?>">
-                        	<input class="form_button" type="submit" name="Envoyer">
+                        	    <input class="form_button" type="submit" name="Envoyer">
+                            </div>
                        	</form>
-			</div>
                         </p>
                         <?php    
                     }
@@ -92,7 +110,7 @@ include('cookies_accept.php');
                 
             } else {  
                 //On enregistre le commentaire dans la base de données                  
-                $post = trim(htmlspecialchars($_POST['commentaire']));
+                $post = trim($_POST['commentaire']);
                 $res = $bdd->prepare('INSERT INTO post (id_user, id_acteur, date_add, post) VALUES (:id_user, :id_acteur, NOW(), :post)');      
                 $res->bindValue(':id_user',   $id_user, PDO::PARAM_INT);
                 $res->bindValue(':id_acteur',   $donnees_acteur, PDO::PARAM_INT);

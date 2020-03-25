@@ -7,6 +7,8 @@
 	    <meta name="viewport" content="width=device-width"/>
 	    <link rel="stylesheet" href="style.css" />
         <title>Site du GBAF</title>
+        <!-- (1) : Declaration for quill library -->
+    	<script src="ckeditor.js"></script>
 	</head>
 	<body>
 		<header>
