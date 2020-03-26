@@ -39,7 +39,7 @@ if(isset($_SESSION['id_user'])) {
                 </p>
             </div>
             <div class="txt_pres_acteur">
-                <h2>Partenaires et Acteurs bancaires</h2>
+                <h1>Partenaires et Acteurs bancaires</h1>
                 <p>
                     Voici la liste des partenaires et acteurs bancaires sur lesquels vous pouvez laisser un avis ou un commentaires.<br/>
                     Il s'agit d'une brève description de chacun mais vous pouvez en savoir plus en cliquant sur "lire la suite"<br/>

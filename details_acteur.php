@@ -96,8 +96,10 @@ if(isset($_SESSION['user_id'])) {
                                     
                                 </div>
                                 </fieldset>
+                            </div>
+                            <div class="comm_send">
                                 <input type="hidden" name="id_acteur" id="id_acteur" value="<?php echo $donnees['id_acteur']; ?>">
-                        	    <input class="form_button" type="submit" name="Envoyer">
+                                <input class="form_button" type="submit" name="Envoyer">
                             </div>
                        	</form>
                         </p>

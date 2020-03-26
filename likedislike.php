@@ -1,11 +1,5 @@
 <?php
 session_start()
-include('timeout.php');
-if(isset($_SESSION['id_user'])) {
-    if(isLoginSessionExpired()) {
-        header("Location:disconnect.php?session_expired=1");
-    }
-}   
 ?>
 <!DOCTYPE html> 
 <html> 

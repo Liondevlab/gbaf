@@ -21,6 +21,11 @@ a:hover
 	color: red;
 }
 
+h1
+{
+	text-align: center;
+}
+
 h1, h2, h3
 {
 	padding-top: 10px;
@@ -460,7 +465,6 @@ footer
 	width: 100%;
 	text-align: center;
 	padding: 8px;
-	margin: 8px;
 }
 
 .acteurs
@@ -550,6 +554,22 @@ footer
 	margin-bottom: 20px;
 	border-radius: 10px 10px 10px 10px;
 	color: #333;
+}
+
+.cke_comm
+{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 100%;
+}
+
+.comm_send
+{
+	text-align: center;
+	padding: 3px;
+	margin: 5px;
 }
 
 .header_comm
@@ -764,7 +784,7 @@ input[type=checkbox]:checked {
   	background: #01D758;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
 	/*  Header  */
 	.header
 	{
@@ -906,7 +926,14 @@ input[type=checkbox]:checked {
 	{
 		width: 100%;
 	}
-
+	.field_comm
+	{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+	}
 	.likedislike_count
 	{
 		font-style:oblique;
@@ -1014,16 +1041,17 @@ input[type=checkbox]:checked {
 	
 	.field_coordinate ,.field_message
 	{
-		width: 30%;
+		width: auto;
 		padding-bottom: 20px;
 		padding-right: 30px;
 		padding-left: 30px;
-		margin: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 640px) and (max-width: 1024px) {
 
 		/*  Header  */
 		.header
@@ -1063,7 +1091,7 @@ input[type=checkbox]:checked {
 		.signup_explanation
 		{
 			font-size: 12px;
-			text-align: left;
+			text-align: center;
 		}
 		/*Acteurs et Details Acteur*/
 		/* taille des logos bancaires */
@@ -1140,7 +1168,14 @@ input[type=checkbox]:checked {
 			border-radius: 10px 10px 10px 10px;
 			color: #333;
 		}
-
+		.field_comm
+		{
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			width: 50%;
+		}
 		.header_comm
 		{
 			display: -webkit-box;
@@ -1190,10 +1225,11 @@ input[type=checkbox]:checked {
 
 		.field_coordinate ,.field_message
 		{
-			width: 30%;
+			width: auto;
 			padding-bottom: 20px;
 			padding-right: 30px;
 			padding-left: 30px;
 			margin: 10px;
 		}
+			.field_coordinate ,.field_message
 }
