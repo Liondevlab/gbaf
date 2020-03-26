@@ -1,10 +1,13 @@
 <?php
-session_start()
-?>
-<?php
+include('header.php');
 include('cookies_accept.php');
+include('timeout.php');
+if(isset($_SESSION['id_user'])) {
+    if(isLoginSessionExpired()) {
+        header("Location:disconnect.php?session_expired=1");
+    }
+}   
 ?>
-    <?php include('header.php'); ?>
         <div class="txt_loi">
             
                 <!--   Texte d'infos sur les cookies de la CNIL   -->

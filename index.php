@@ -1,7 +1,20 @@
 <?php
 session_start();
-?>
-<?php
+include('timeout.php');
+$message="";
+
+if(isset($_SESSION["id_user"])) {
+    if(!isLoginSessionExpired()) {
+        header('Location:home.php');
+    } else {
+        header('Location:disconnect.php?session_expired=1');
+    }
+}
+
+if(isset($_GET['session_expired'])) {
+    $message = "Votre session a expiré. Merci de vous reconnecter";
+}
+
 include('cookies_accept.php');
 ?>
 <!DOCTYPE html>
@@ -55,16 +68,16 @@ include('cookies_accept.php');
                         $isPasswordCorrect = password_verify($password, $resultat['password']);
                     }
 
-                    if (!empty($resultat)) //Si le résultat n'est pas vide on ouvre la session et on envoi l'utilisateur sur la page home.php
-                    {
-                        if ($isPasswordCorrect) {
-                            session_start();
-                            $_SESSION['id_user'] = $resultat['id_user'];
-                            $_SESSION['username'] = $username;
-                            $_SESSION['nom'] = $resultat['nom'];
-                            $_SESSION['prenom'] = $resultat['prenom'];
-                            setcookie("username", $_SESSION['username'] , time() + 365*24*3600, "/", null, false, true);
-                            header('Location: home.php');
+                    if (!empty($resultat)) {//Si le résultat n'est pas vide on ouvre la session et on envoi l'utilisateur sur la page home.php
+                            if ($isPasswordCorrect) {
+                                session_start();
+                                $_SESSION['id_user'] = $resultat['id_user'];
+                                $_SESSION['username'] = $username;
+                                $_SESSION['nom'] = $resultat['nom'];
+                                $_SESSION['prenom'] = $resultat['prenom'];
+                                $_SESSION['loggedin_time'] = time();
+                                setcookie("username", $_SESSION['username'] , time() + 365*24*3600, "/", null, false, true);
+                                header('Location: home.php');
                             exit();
                         } else { // Message si le mot de passe est incorrect et proposition d'aller sur la page de réinitialisation de mot de passe
                             ?>
@@ -85,6 +98,7 @@ include('cookies_accept.php');
                     <!--Logo et formulaire de connexion-->
                     <div class="index_logo">
                     <p><img class="index_logo" src="./files/logogbaf_texte.png" alt="Logo GBAF" /></p><br/>
+                    <div class="warning"><?php if($message!="") { echo $message; } ?></div>
                     <p class="bonjour">Bonjour. Veuillez vous connecter s'il vous plait :</p>
                     </div>    
                         <?php

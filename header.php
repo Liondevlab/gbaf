@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!--   Header contenant le logo à gauche, les infos user à droite et un bouton déconnexion. => à placer en include   -->
 <!DOCTYPE html>
 <html lang="fr">

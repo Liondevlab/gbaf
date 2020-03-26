@@ -1,14 +1,13 @@
 <?php
-session_start()
-?>
-<?php
+include('header.php');
 include('cookies_accept.php');
-?>
-<?php
-    
-    include('header.php');
-    include('openbdd.php');
-    
+include('openbdd.php');
+include('timeout.php');
+if(isset($_SESSION['user_id'])) {
+    if(isLoginSessionExpired()) {
+        header("Location:disconnect.php?session_expired=1");
+    }
+}    
     // Code PHP pour traiter l'envoi de l'email
     ?>
     <div class="body_contact">  
@@ -70,7 +69,7 @@ include('cookies_accept.php');
                 $contenu .= '<p><strong>Nom</strong>: '.$nom.'</p>';
                 $contenu .= '<p><strong>Email</strong>: '.$email.'</p>';
                 $contenu .= '<p><strong>Message</strong>: </p><br/>';
-                $contenu .= '<p><strong>'.$message.'</strong></p>';
+                $contenu .= '<p>'.$message.'</p>';
                 $contenu .= '<span style="text-align: right;"><em>Le webmaster</em></span>';
                 $contenu .= '</body></html>'; // Contenu du message de l'email
             

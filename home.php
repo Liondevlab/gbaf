@@ -1,17 +1,21 @@
 <?php
-session_start()
-?>
-<?php
+include('header.php'); 
 include('cookies_accept.php');
-?>
-    <?php include('header.php'); ?>
-        <?php
+include('timeout.php');
+if(isset($_SESSION['id_user'])) {
+    if(isLoginSessionExpired()) {
+        header("Location:disconnect.php?session_expired=1");
+    }
+}
+var_dump($_SESSION);
+echo time();
+
             //On vérifie la connexion de l'utilisateur
             if (isset($_SESSION['id_user']) AND ($_SESSION['nom']) AND ($_SESSION['prenom']) AND ($_SESSION['username'])) 
             {
             ?>
             <!--   Présentation du site, des banques et des partenaires   -->
-            <div align="center" class="txt_presentation">
+            <div class="txt_presentation">
                 <h1 align="center">Bienvenue!</h1>
                 <p>
                     Le Groupement Banque Assurance Français (GBAF) est une fédération<br/>

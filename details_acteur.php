@@ -1,10 +1,14 @@
 <?php
-session_start()
-?>
-<?php
+include('header.php'); 
 include('cookies_accept.php');
+include('timeout.php');
+if(isset($_SESSION['user_id'])) {
+    if(isLoginSessionExpired()) {
+        header("Location:disconnect.php?session_expired=1");
+    }
+}
 ?>
-    <?php include('header.php'); ?>
+
         <?php //on vérifie la présence de l'utilisateur connecté sinon on retourne à l'index
             if (isset($_SESSION['id_user']) AND ($_SESSION['nom']) AND ($_SESSION['prenom']) AND ($_SESSION['username'])) 
             {
