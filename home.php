@@ -7,8 +7,6 @@ if(isset($_SESSION['id_user'])) {
         header("Location:disconnect.php?session_expired=1");
     }
 }
-var_dump($_SESSION);
-echo time();
 
             //On vérifie la connexion de l'utilisateur
             if (isset($_SESSION['id_user']) AND ($_SESSION['nom']) AND ($_SESSION['prenom']) AND ($_SESSION['username'])) 
@@ -16,12 +14,12 @@ echo time();
             ?>
             <!--   Présentation du site, des banques et des partenaires   -->
             <div class="txt_presentation">
-                <h1 align="center">Bienvenue!</h1>
+                <h1>Bienvenue!</h1>
                 <p>
                     Le Groupement Banque Assurance Français (GBAF) est une fédération<br/>
                     représentant les 6 grands groupes français.<br/>
                 </p>
-                <div class="logo_banques" align="center">
+                <div class="logo_banques">
                     <a href="https://group.bnpparibas/"><img class="logo_bnp" src="./files/bnp.png" alt="logo bnp"></a>
                     <a href="https://groupebpce.com/"><img class="logo_bpce" src="./files/bpce.png" alt="logo bpce"></a>
                     <a href="https://www.credit-agricole.com/"><img class="logo_ca" src="./files/ca.png" alt="logo ca"></a>
@@ -41,7 +39,7 @@ echo time();
                 </p>
             </div>
             <div class="txt_pres_acteur">
-                <h2 align="center">Partenaires et Acteurs bancaires</h2>
+                <h2>Partenaires et Acteurs bancaires</h2>
                 <p>
                     Voici la liste des partenaires et acteurs bancaires sur lesquels vous pouvez laisser un avis ou un commentaires.<br/>
                     Il s'agit d'une brève description de chacun mais vous pouvez en savoir plus en cliquant sur "lire la suite"<br/>
@@ -62,7 +60,7 @@ echo time();
             ?>
             <div class="acteur">
                 <!--   On liste les acteur avec une partie de leur description accompagnés de leur logo et d'un bouton pour accéder au détails   -->
-                <img align="center" class="logo_acteur_img" src="<?php echo $donnees['logo']; ?>">
+                <img class="logo_acteur_img" alt="Logo acteur" src="<?php echo $donnees['logo']; ?>">
                 
                 <div class="texte_acteur">
                     <div>
@@ -78,8 +76,8 @@ echo time();
                     </div>
                     <div>
                         <div class="bouton_lire_suite">
-                            <form id="page_acteur" action="details_acteur.php" method="post">  
-                                <input type="hidden" name="id_acteur" id="id_acteur" value="<?= $donnees['id_acteur']; ?>">
+                            <form action="details_acteur.php" method="post">  
+                                <input type="hidden" name="id_acteur" value="<?= $donnees['id_acteur']; ?>">
                                 <em><input class="form_button" type="submit" name="Détails" value="Lire la suite"></em>
                             </form>
                         </div>

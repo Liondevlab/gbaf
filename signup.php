@@ -59,10 +59,7 @@ include('cookies_accept.php');
                 }
                 if(count($error) > 0 ) {
                         $showErrors = true;
-                        $nom  = $post['nom'];
-                        $prenom   = $post['prenom'];
-                        $username     = $post['username'];
-                        $question   = $post['question'];
+
                 } else {                    
                     $post['password2'] == $post['password'];
                     $post['password'] = password_hash($post['password'], PASSWORD_DEFAULT); 
@@ -84,6 +81,21 @@ include('cookies_accept.php');
                     } else { var_dump($res->erroInfo());}
                 }
             }
+            if(isset($post['nom'])) {
+                $nom  = $post['nom'];
+            } else { $nom = "";}
+                        
+            if(isset($post['prenom'])) {
+                $prenom   = $post['prenom'];
+            } else { $prenom = "";}
+                        
+            if(isset($post['username'])) {
+                $username     = $post['username'];
+            } else { $username = "";}
+                        
+            if(isset($post['question'])) {
+                $question   = $post['question'];
+            } else { $question = "";}
                     ?>
                     <div class="logo_index">
                         <p><a href="./index.php"><img src="./files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>

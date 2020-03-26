@@ -83,7 +83,7 @@ if(isset($_SESSION['user_id'])) {
                     <?php
                 } else {
                     ?>
-                    <p class="warning" align="center"> Il y a eu une erreur lors de l'envoi </p>
+                    <p class="warning"> Il y a eu une erreur lors de l'envoi </p>
                     <?php
                 }    
 //===================================================================================================================
@@ -133,11 +133,14 @@ if(isset($_SESSION['user_id'])) {
             $nom = $resultat['nom'];
         ?>
         <h3 class="contact_title"> Contactez nous </h3>
-        <div class="warning" align="center">
+        <div class="warning">
             Merci de remplir tout les champs pour que formulaire puisse partir.
         </div>
-        <p align="center">
-            <div class="contact_form" align="center">
+            <div class="contact_form">
+                <div>
+                    
+                </div>
+                <div>
                 <form id="contact" method="post" action="form_contact.php">
                     <fieldset class="field_coordinate"><legend>Vos coordonnées</legend>
                         <p><label for="nom">Nom & Prénom: <span style="color:#ff0000;">*</span> <br/> </label><input class="fields" type="text" id="nom" name="nom" value="<?php echo $nom; echo " "; echo $prenom; ?>" /></p>
@@ -165,10 +168,13 @@ if(isset($_SESSION['user_id'])) {
                         <i><input type="checkbox" name="RGBD" id="RGBD" /></i> <label for="RGBD"> <span style="color:#ff0000;">*</span> J'accepte que mes données personnelles soient collectées</label> <br/>
                     </div>
                     <p class="captcha_txt">Combien font 1+3: <span style="color:#ff0000;">*</span>: <input class="captcha" type="text" name="captcha" size="2" /></p>
-                    <div align="center"><input class="form_button" type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
+                    <div><input class="form_button" type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
                 </form>
+                </div>
+                <div>
+                    
+                </div>
             </div>
-        </p>
     </div>
     <?php
     include('footer.php');

@@ -56,8 +56,10 @@ body
 
 .warning
 {
-	font-weight: bold;
+	font-weight: 600;
+	font-style: italic;
 	color: red;	
+	text-align: center;
 }
 
 .fields
@@ -94,6 +96,14 @@ body
 	        align-items: center;	
 }
 
+.contact_form
+{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	width: auto;
+}
+
 .cookies_accept
 {
 	border-bottom: groove 3px red;
@@ -110,6 +120,7 @@ body
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	    -ms-transform: translateX(-50%) translateY(-50%);
 	        transform: translateX(-50%) translateY(-50%);
+	text-align: center;
 	width: 100%;
 	top: 50%;
 	left: 50%;
@@ -195,8 +206,20 @@ footer
 	padding: 15px;
 }
 
+.copyright_txt
+{
+	text-align: center;
+}
+
 /* pages Connexion / création de compte / mot de passe oublié / gestion de compte*/
 
+.logo_gbaf
+{
+	display:block;
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
 .index_logo, .logo_index
 {
 	display: flex;
@@ -255,6 +278,7 @@ footer
 	border-radius: 10px;
 	padding-right: 20px;
 	padding-left: 20px;
+	text-align: center;
 }
 
 .user_title
@@ -273,6 +297,11 @@ footer
 	background-color: #EEEEEE;
 	color: #333;
 	border-radius: 10px;
+}
+
+.retour
+{
+	text-align: center;
 }
 
 .user_info
@@ -492,6 +521,11 @@ footer
 	padding: 5px;
 }
 
+.logo_acteur_detail
+{
+	text-align: center;
+}
+
 .likedislike_count
 {
 	font-style:oblique;
@@ -660,12 +694,14 @@ footer
 
 .field_coordinate ,.field_message
 {
-	width: 20%;
+	width: auto%;
 	border: groove 3px red; 
 	border-radius: 8px;
 	background-color: #EEEEEE;
 	padding: 30px;
 	margin: 10px;
+	text-align: center;
+	
 }
 .field_comm
 {
@@ -699,6 +735,7 @@ footer
 {
 	color: green;
 	font-family:  "verdana";
+	text-align: center;
 }
 
 /*Case à cocher formulaire*/
@@ -788,6 +825,7 @@ input[type=checkbox]:checked {
 		text-align: center;
 		padding: 5px;
 	}
+
 	.signup_explanation
 	{
 		font-size: 12px;
@@ -815,16 +853,18 @@ input[type=checkbox]:checked {
 	.txt_presentation
 	{
 		font-size: 12px;
-		margin-left: 8px;
-		margin-right: 8px;
-		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
 		text-align: justify;
 	}
 
 	.txt_pres_acteur
 	{
 		font-size: 12px;
-		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
 		text-align: justify;
 	}
 
@@ -1042,14 +1082,14 @@ input[type=checkbox]:checked {
 			margin-left: 8px;
 			margin-right: 8px;
 			width: auto;
-			text-align: justify;
+			text-align: center;
 		}
 
 		.txt_pres_acteur
 		{
 			font-size: 12px;
 			width: auto;
-			text-align: justify;
+			text-align: center;
 		}
 
 		.acteurs

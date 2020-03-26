@@ -35,8 +35,8 @@ if(isset($_SESSION['user_id'])) {
         //On affiche les détails grâce aux données récoltée
                 ?>
         <div class="detail_acteur">
-            <div class="logo_acteur_detail" align="center">
-                <img class="logo_acteur_detail_img"src="./<?php echo htmlspecialchars($donnees['logo']) ?>">
+            <div class="logo_acteur_detail" >
+                <img class="logo_acteur_detail_img" alt="logo acteur" src="./<?php echo htmlspecialchars($donnees['logo']) ?>">
             </div>
                              
                 <h2>
@@ -74,8 +74,8 @@ if(isset($_SESSION['user_id'])) {
                     if (isset($_POST['comm_button'])) {
                         ?>
                         <p>
-                       	<form align="center" id="commentaire" method="post" action="">
-                            <div align="center" class="cke_comm">
+                       	<form id="commentaire" method="post" action="details_acteur.php">
+                            <div  class="cke_comm">
                                 <br/>
                                 <fieldset class="field_comm"><legend>Votre commentaire :</legend>
                                 <div>
@@ -106,7 +106,7 @@ if(isset($_SESSION['user_id'])) {
                     
                     } else { //Si le commentaire est déjà fait on affiche un message
                         ?>
-                        <p align="center" style="color: red;">
+                        <p style="color: red;">
                             <i>Vous avez déja laissé un commentaire sur cet acteur...</i>
                         </p>
                     <?php
@@ -122,7 +122,7 @@ if(isset($_SESSION['user_id'])) {
                 
                 if ($res->execute()) {
                     ?>
-                    <p style="color: green;" align="center">Commentaire ajouté!</p>
+                    <p style="color: green;">Commentaire ajouté!</p>
                     <?php
                 }
             }                   
@@ -169,14 +169,14 @@ if(isset($_SESSION['user_id'])) {
                         } //On affiche les bouton et les compteurs de like / dislike
                         ?>
                     <div class="right_buttons">
-                        <div align="center" class="txt_commentaires">
-                        <form id="unhide_comm" method="post" action="">
+                        <div class="txt_commentaires">
+                        <form id="unhide_comm" method="post" action="details_acteur.php">
                             <input type="hidden" name="comm_button" id="comm_button" value="comm_button">
                             <input type="hidden" name="id_acteur" id="id_acteur" value="<?php echo $donnees['id_acteur']; ?>">
                             <input class="comm_button" type="submit" name="commentez" value="Nouveau Commentaire">
                         </form>           
                         </div>
-                        <div align="center" class="vote">
+                        <div class="vote">
                             <a href="./likedislike.php?t=1&id=<?= $id ?>"><img class="pouce_vert" src="./files/thumb_up.png" alt="pouce vert"></a> 
                             <span class="likedislike_box"><input class="likedislike_count" value="<?= $likes ?>"/></span>
                             <a href="./likedislike.php?t=2&id=<?= $id ?>"><img class="pouce_rouge" src="./files/thumb_down.png" alt="pouce rouge"></a> 
@@ -204,8 +204,8 @@ if(isset($_SESSION['user_id'])) {
                                 $res->execute(array($com_data['id_user']));
                                 $com_username = $res->fetch();
                                 ?>
-                                <p align="left"><strong><?php echo $com_username['prenom']; ?></strong> <i><br/>le <?php echo $com_data['date_comm']; ?></i></p>
-                                <p align="left"><?php echo $com_data['post']; ?></p>
+                                <p><strong><?php echo $com_username['prenom']; ?></strong> <i><br/>le <?php echo $com_data['date_comm']; ?></i></p>
+                                <p><?php echo $com_data['post']; ?></p>
                             </div>
                             <div>
                                 

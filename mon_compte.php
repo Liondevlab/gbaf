@@ -205,7 +205,7 @@ if(isset($_SESSION['id_user'])) {
                     <!-- Pour Flex -->
                 </div>
                 <div class="change_fields">
-                    <form id="change_name" action="" method="post">
+                    <form id="change_name" action="mon_compte.php" method="post">
                         <p align="center">
                         <label>Nouveau Nom :</label><br/>
                         <input class="fields" type="text" name="change_name" autofocus/><br/>
@@ -225,7 +225,7 @@ if(isset($_SESSION['id_user'])) {
                 <div>
                 </div>
                 <div class="change_fields">
-                    <form id="change_forname" action="" method="post">
+                    <form id="change_forname" action="mon_compte.php" method="post">
                         <p align="center">
                         <label>Nouveau Prénom :</label><br/>
                         <input class="fields" type="text" name="change_forname" autofocus/><br/>
@@ -244,7 +244,7 @@ if(isset($_SESSION['id_user'])) {
                 <div>
                 </div>
                 <div class="change_fields">
-                    <form id="change_username" action="" method="post">
+                    <form id="change_username" action="mon_compte.php" method="post">
                         <p align="center">
                         <label>Choisissez votre nouveau nom d'utilisateur :</label><br/>
                         <input class="fields" type="text" name="change_username" autofocus/><br/>
@@ -263,7 +263,7 @@ if(isset($_SESSION['id_user'])) {
                 <div>
                 </div>
                 <div class="change_fields">
-                    <form id="change_password" action="" method="post">
+                    <form id="change_password" action="mon_compte.php" method="post">
                         <p align="center">
                         <label>Choisissez votre mot de passe :</label><br/>
                         <input class="fields" type="password" name="password" autofocus/><br/>
@@ -285,7 +285,7 @@ if(isset($_SESSION['id_user'])) {
 
                 </div>
                 <div class="change_fields">
-                    <form id="change_question" action="" method="post">
+                    <form id="change_question" action="mon_compte.php" method="post">
                         <p align="center">
                         <label>Tapez votre question secrète en cas de perte de mot de passe :</label><br/>
                         <input class="fields" type="text" name="question" autofocus/><br/>
@@ -313,7 +313,7 @@ if(isset($_SESSION['id_user'])) {
                     //Affichage des infos et boutons de modification
                     ?>
                     <div class="user_title"> 
-                            <strong><h3>Vos informations personnelles</h3></strong><br/>
+                            <h3>Vos informations personnelles</h3><br/>
                     </div>
                     <div class="user_page_center">
                     	<div>
@@ -321,28 +321,28 @@ if(isset($_SESSION['id_user'])) {
                     	</div>
                         <div class="user_details">
                   	        <strong>Nom :  </strong><?php echo $infos['nom']; ?>
-                                <form class="user_info" id="name_change" action="" method="post">
-                                <input type="hidden" name="name_change" id="name_change" value="name"> 
+                                <form class="user_info" id="name_change" action="mon_compte.php" method="post">
+                                <input type="hidden" name="name_change" id="name" value="name"> 
                                 <em><input class="bouton_modifier" type="submit" name="modifier" value="Modifier"></em>
                                 </form> <br/>
      			            <strong>Prénom :  </strong><?php echo $infos['prenom']; ?> 
-                                <form class="user_info" id="forname_change" action="" method="post">
-                                <input type="hidden" name="forname_change" id="forname_change" value="forname"> 
+                                <form class="user_info" id="forname_change" action="mon_compte.php" method="post">
+                                <input type="hidden" name="forname_change" id="forname" value="forname"> 
                                 <em><input class="bouton_modifier" type="submit" name="modifier" value="Modifier"></em>
                                 </form> <br/>
         		            <strong>Nom d'utilisateur :  </strong><?php echo $infos['username']; ?>
-                                <form class="user_info" id="username_change" action="" method="post">
-                                <input type="hidden" name="username_change" id="username_change" value="username"> 
+                                <form class="user_info" id="username_change" action="mon_compte.php" method="post">
+                                <input type="hidden" name="username_change" id="username" value="username"> 
                                 <em><input class="bouton_modifier" type="submit" name="modifier" value="Modifier"></em>
                                 </form> <br/>
                             <strong>Mot de passe :  </strong>******** <br/>
-                                <form class="user_info" id="password_change" action="" method="post">
-                                <input type="hidden" name="password_change" id="password_change" value="password">
+                                <form class="user_info" id="password_change" action="mon_compte.php" method="post">
+                                <input type="hidden" name="password_change" id="password" value="password">
                                 <em><input class="bouton_modifier" type="submit" name="modifier" value="Modifier"></em>
                                 </form> <br/>
         			        <strong>Question secrète :  </strong><?php echo $infos['question']; ?>
-                                <form class="user_info" id="question_change" action="" method="post">
-                                <input type="hidden" name="question_change" id="question_change" value="question">
+                                <form class="user_info" id="question_change" action="mon_compte.php" method="post">
+                                <input type="hidden" name="question_change" id="question" value="question">
                                 <em><input class="bouton_modifier" type="submit" name="modifier" value="Modifier"></em>
                                 </form> <br/>
         			        <strong>Réponse secrète :  </strong>******** <br/>
@@ -351,7 +351,10 @@ if(isset($_SESSION['id_user'])) {
                     		<!--  FLEX  -->
                     	</div>
         	        </div>
-                    <br/><p align="center"><a href="home.php">Cliquez ici pour retourner à la page d'accueil.</a></p>
+                    <br/>
+                    <div class="retour">
+                    <p><a href="home.php">Cliquez ici pour retourner à la page d'accueil.</a></p>
+                    </div>
                     <?php
                 } else {
                     header('Location: index.php');

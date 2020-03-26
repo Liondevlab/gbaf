@@ -15,7 +15,7 @@ if(isset($_GET['session_expired'])) {
     $message = "Votre session a expiré. Merci de vous reconnecter";
 }
 
-include('cookies_accept.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,6 +26,7 @@ include('cookies_accept.php');
         <title>Page de connexion GBAF</title>
     </head>
     <body>
+        <?php include('cookies_accept.php');?>
         <p>
             <a href="https://jigsaw.w3.org/css-validator/check/referer">
                 <img style="border:0;width:88px;height:31px"
@@ -121,7 +122,7 @@ include('cookies_accept.php');
                             } else {
                                 ?><input class="fields" type="text" name="username" autofocus/><br/>
 				            <label>Mot de passe :</label><br/>
-                        	<input class="fields" type="password" name="password" autofocus/><br/>
+                        	<input class="fields" type="password" name="password" /><br/>
                         	<input class="form_button" type="submit" value="Valider" /><br/>  
                                 <?php
                             }
