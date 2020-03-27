@@ -28,7 +28,8 @@ session_start();
 					<div>
 						<p>
 							<a href="mon_compte.php">Mon compte</a> <br/>
-						  	<a href="disconnect.php">Se déconnecter</a>
+						  	<a href="disconnect.php">Se déconnecter</a> <br/>
+						  	<a href="home.php">Accueil</a>
 						</p>
 					</div>
 				</div>

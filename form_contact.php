@@ -165,7 +165,6 @@ if(isset($_SESSION['user_id'])) {
                          <!-- (3): Javascript code to replace textarea with id='editor1' by CKEditor -->
                         <div class="cke_form">
                         <script>
-                 
                             CKEDITOR.replace( 'message', {
                             uiColor: '#FF0000',
                             toolbar: [

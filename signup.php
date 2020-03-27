@@ -45,7 +45,7 @@ include('cookies_accept.php');
                     $error[] = '<p class="warning" align="center">Ce nom d\'utilisateur est déjà pris....</p>';
                     }                
                 }
-                if(!preg_match("#^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#",$post['password'])) { //On vérie que le mot de passe ne comporte que 8 caractères minimum, des lettres, des chiffres et des caractères spéciaux
+                if(!preg_match("#^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$#",$post['password'])) { //On vérie que le mot de passe ne comporte que 8 caractères minimum, des lettres, des chiffres et des caractères spéciaux
                     $error[] = '<p class="warning" align="center">Votre mot de passe doit contenir au une lettre majuscule, une minuscule, un chiffre, un caractère spécial et doit être d\'une longueur minimum de 8 caractères.</p>';                
                 }
                 if($post['password2'] != $post['password']) { //On vérifie si les mot de passe sont différent

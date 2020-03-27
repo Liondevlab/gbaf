@@ -13,6 +13,7 @@ include('cookies_accept.php');
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <p class="logo_lostpwd"><a href="index.php"><img class="logo_gbaf" src="files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>
         <?php //On ouvre la base de données et on vérifie que les variables Post utilisateur et mot de passe existent puis on les mets dans des variables normales
         include('openbdd.php');
         if (isset($_SESSION['username'])) {
@@ -29,8 +30,7 @@ include('cookies_accept.php');
                 $password2= trim(htmlspecialchars($_POST['password2']));
             }
         
-        if(isset($password, $password2)) 
-            {
+        if(isset($password, $password2)) {
                 if(empty($password)) { //On vérifie si le mot de passe est vide
                     ?>
                     <p>
@@ -41,10 +41,10 @@ include('cookies_accept.php');
                     </div>
                     </p>
                     <?php
-                } elseif(!preg_match("#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}$#",$password)) { //On vérifie que le mot de passe respecte les règle de création
-                    ?>
+                } elseif(!preg_match("#^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$#",$password)) { //On vérifie que le mot de passe respecte les règle de création
+                    ?>                 
                     <div class="warning">
-                        <p>Votre mot de passe ne doit contenir que des lettres majuscules, minuscules, des chiffres, des caractères spéciaux et doit être d'une longueur minimum de 8 caractères"</p>
+                        <p>"Votre mot de passe DOIT contenir au moins une majuscule, une minuscule, un chiffre, un caractère spécial et doit faire au minimum 8 caractères."</p>
                         <a align="center" href="lost_password.php">Retour à la page réinitialisation de mot de passe.</a>
                         <a href="./index.php">Ou à la page de connexion.</a>
                     </div>
@@ -62,36 +62,25 @@ include('cookies_accept.php');
                 $res = $bdd->prepare('UPDATE account SET password = :password WHERE username = :username');
                 $res->bindValue(':username',   $username, PDO::PARAM_STR);
                 $res->bindValue(':password',   $password, PDO::PARAM_STR);
-                    
-                    if ($res->execute()) { //On envoi un message pour avertir si c'est bon ou pas
-                        ?>
-                        <div class="form_ok">
-                            <p>"Votre mot de passe a bien été changé, vous pouvez retourner à la page d'accueil pour vous connecter."</p><br/>
-                            <a href="./index.php">Retour à la page de connexion.</a>
-                        </div>
-                        <?php
-                    } else {
-                        ?>
-                        <div class="warning">
-                            <p>Une erreur s'est produite... Veuillez reessayer.</p><br/>
-                            <a href="./index.php">Retour à la page de connexion.</a>
-                        </div>
-                        <?php
-                    }
+                if ($res->execute()) { //On envoi un message pour avertir si c'est bon ou pas
+                    $password_changed = 1;
+                } else {
+                    $password_changed = 2;
                 }
             }
+        }
 
         if  (isset($_POST['reponse'])) { //On vérifie si la réponse a été envoyé et qu'elle est bonne
         $reponse = trim(htmlspecialchars($_POST['reponse']));
         $username = $_SESSION['username'];
-        $req = $bdd->prepare('SELECT reponse FROM account WHERE username = ?'); 
-        $req->execute(array($username));
+        $req = $bdd->prepare('SELECT reponse FROM account WHERE username = :username'); 
+        $req->execute(array('username' => $username));
         $resultat = $req->fetch();
         $isreponseok = password_verify($reponse, $resultat['reponse']);
-            if (isset($isreponseok)) //On vérifie si la reponse a bien été vérifiée
+            if ($isreponseok) //On vérifie si la reponse a bien été vérifiée
             {
                 ?> <!--   On affiche donc le formulaire de changement de mot de passe   -->
-                <p class="logo_lostpwd"><a href="index.php"><img class="logo_gbaf" src="files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>
+                <p class="signup_explanation">* Votre mot de passe DOIT contenir au moins une majuscule, une minuscule, un chiffre, un caractère spécial et doit faire au minimum 8 caractères.</p>
                 <div class="form_lostpwd">
                     <div>
                     </div>
@@ -131,7 +120,6 @@ include('cookies_accept.php');
             $req->execute(array($username));
             if ($resultat = $req->fetch()) { //si on obtient la question on affiche le formulaire pour y répondre
                 ?>
-                <p><a href="index.php"><img class="logo_gbaf" src="files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>
                 <div class="form_lostpwd">
                     <div>
                     </div>
@@ -164,8 +152,24 @@ include('cookies_accept.php');
         }
         else
         { //Si le nom d'utilisateur n'est pas dans la variable on affiche le formulaire qui demande le nom d'utilisateur
-        ?>  
-            <p><a align="center" href="index.php"><img class="logo_gbaf" src="files/logogbaf_texte.PNG" alt="Logo GBAF" /></a></p><br/>
+            if (isset($password_changed)) {
+                if ($password_changed == 1) {            
+                    ?>
+                    <div class="form_ok">
+                        <p>"Votre mot de passe a bien été changé, vous pouvez retourner à la page d'accueil pour vous connecter."</p><br/>
+                        <a href="./index.php">Retour à la page de connexion.</a><br/>
+                    </div>
+                    <?php
+                } else {
+                    ?>
+                    <div class="warning">
+                        <p>Une erreur s'est produite... Veuillez reessayer.</p><br/>
+                        <a href="./index.php">Retour à la page de connexion.</a><br/>
+                    </div>
+                    <?php
+                }
+            }            
+            ?>
             <div class="form_lostpwd">
                 <div>
                 </div>
