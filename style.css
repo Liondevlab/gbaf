@@ -712,17 +712,17 @@ footer
 	font-size: 25px;
 }
 
-.field_coordinate ,.field_message
+.field_coordinate, .field_message
 {
-	width: auto%;
+	width: auto;
 	border: groove 3px red; 
 	border-radius: 8px;
 	background-color: #EEEEEE;
 	padding: 30px;
 	margin: 10px;
 	text-align: center;
-	
 }
+
 .field_comm
 {
 	width: 35%;
@@ -1231,5 +1231,5 @@ input[type=checkbox]:checked {
 			padding-left: 30px;
 			margin: 10px;
 		}
-			.field_coordinate ,.field_message
+		
 }
