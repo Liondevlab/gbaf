@@ -163,7 +163,6 @@ body
 .header_logo
 {
 	width: 35%;
-	padding-left: 15px;
 	text-align: left;
 }
 
@@ -514,14 +513,14 @@ footer
 
 .logo_acteur_img
 {
-	width: 25%;
+	width: 50%;
 	border-radius:10px;
 	padding: 5px;
 }
 
 .logo_acteur_detail_img
 {
-	width: 30%;
+	width: 50%;
 	border-radius:10px;
 	padding: 5px;
 }
@@ -953,14 +952,14 @@ input[type=checkbox]:checked {
 
 	.logo_acteur_img
 	{
-		width: 100%;
+		width: 75%;
 		border-radius:10px;
 		padding: 5px;
 	}
 	/*  Détails acteurs  */
 	.logo_acteur_detail_img
 	{
-		width: 100%;
+		width: 75%;
 	}
 	.field_comm
 	{
@@ -1092,8 +1091,8 @@ input[type=checkbox]:checked {
 	{
 		width: auto;
 		padding-bottom: 20px;
-		padding-right: 30px;
-		padding-left: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
 		margin-left: 5px;
 		margin-right: 5px;
 	}
@@ -1196,14 +1195,14 @@ input[type=checkbox]:checked {
 
 		.logo_acteur_img
 		{
-			width: 100%;
+			width: 50%;
 			border-radius:10px;
 			padding: 5px;
 		}
 		/*  Détails acteurs  */
 		.logo_acteur_detail_img
 		{
-			width: 100%;
+			width: 65%;
 		}
 
 		.detail_acteur
