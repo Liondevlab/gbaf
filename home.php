@@ -60,7 +60,7 @@ if(isset($_SESSION['id_user'])) {
             ?>
             <div class="acteur">
                 <!--   On liste les acteur avec une partie de leur description accompagnés de leur logo et d'un bouton pour accéder au détails   -->
-                <img class="logo_acteur_img" alt="Logo acteur" src="<?php echo $donnees['logo']; ?>">
+                <img class="logo_acteur_img" alt="Logo acteur" src="https://gbaf.liondevlab.com/<?php echo $donnees['logo']; ?>">
                 
                 <div class="texte_acteur">
                     <div>

@@ -36,7 +36,7 @@ if(isset($_SESSION['user_id'])) {
                 ?>
         <div class="detail_acteur">
             <div class="logo_acteur_detail" >
-                <img class="logo_acteur_detail_img" alt="logo acteur" src="./<?php echo htmlspecialchars($donnees['logo']) ?>">
+                <img class="logo_acteur_detail_img" alt="logo acteur" src="https://gbaf.liondevlab.com/<?php echo htmlspecialchars($donnees['logo']) ?>">
             </div>
                              
                 <h2>

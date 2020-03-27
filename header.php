@@ -16,7 +16,7 @@ session_start();
 		<header>
 			<div class="header">
 		    	<div class="header_logo">
-		    		<a href="home.php"><img class="logo" src="https://gbaf.liondevlab.com/files/LogoGBAF_texte.png" alt="Logo GBAF" /></a>
+		    		<a href="home.php"><img class="logo" src="https://gbaf.liondevlab.com/files/logogbaf_texte.png" alt="Logo GBAF" /></a>
 		   		</div>
 		    
 			  	<div class="header_username">
