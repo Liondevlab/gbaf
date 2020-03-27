@@ -629,6 +629,15 @@ footer
  	border-radius: 20px;
 }
 
+.comm_button:hover
+{
+	border: 3px groove red;
+}
+.comm_button:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .bouton_modifier, .form_button
 {
 	width: auto;
@@ -659,11 +668,27 @@ footer
 
 .pouce_vert, .pouce_rouge
 {
-	width: 17%;
+	width: 38px;
+}
+
+.pouce_vert:hover, .pouce_rouge:hover
+{
+	border: 3px groove red;
+	border-radius: 20px;
+}
+
+.pouce_vert:active, .pouce_rouge:active
+{
+	border: 5px groove red;
+	border-radius: 20px;
+	padding: 3px;
 }
 
 .vote
 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	border: groove 3px red;
 	border-radius: 20px;
 	padding-top: 5px;
