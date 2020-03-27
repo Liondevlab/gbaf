@@ -61,6 +61,7 @@ body
 
 .warning
 {
+	font-size: 12px;
 	font-weight: 600;
 	font-style: italic;
 	color: red;	
@@ -615,6 +616,12 @@ footer
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	align-items: center;
+}
+
+.box_comm
+{
+	text-align: center;
 }
 
 .comm_button
@@ -633,11 +640,13 @@ footer
 {
 	border: 3px groove red;
 }
+
 .comm_button:active {
   background-color: red;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 .bouton_modifier, .form_button
 {
 	width: auto;
@@ -1037,7 +1046,20 @@ input[type=checkbox]:checked {
 
 	.pouce_vert, .pouce_rouge
 	{
-		width: 17%;
+		width: 38px;
+	}
+
+	.pouce_vert:hover, .pouce_rouge:hover
+	{
+		border: 3px groove red;
+		border-radius: 20px;
+	}
+
+	.pouce_vert:active, .pouce_rouge:active
+	{
+		border: 5px groove red;
+		border-radius: 20px;
+		padding: 3px;
 	}
 
 	.vote

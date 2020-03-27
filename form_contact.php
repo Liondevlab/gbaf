@@ -73,19 +73,23 @@ if(isset($_SESSION['user_id'])) {
                 $contenu .= '<span style="text-align: right;"><em>Le webmaster</em></span>';
                 $contenu .= '</body></html>'; // Contenu du message de l'email
             
-            // Fonction principale qui envoi l'email
-            ?>
-    
-            <?php
-                if(mail("julien.guerard@liondevlab.com", $objet, $contenu, $header)) { // Si le mail part
-                    ?>
-                    <h3 class="form_ok" align="center">Le formulaire a bien été envoyé</h3>
+                // Fonction principale qui envoi l'email
+                ?>
+        
                     <?php
-                } else {
-                    ?>
-                    <p class="warning"> Il y a eu une erreur lors de l'envoi </p>
-                    <?php
-                }    
+                    if(isset($_SESSION['sended'])) {
+                        ?>
+                        <p class="warning"> Le mail est déja parti </p>
+                        <?php
+                        unset($_SESSION['sended']);
+                    } else {
+                        $_SESSION['sended'] = true;
+                        unset($_POST);
+                        mail("julien.guerard@liondevlab.com", $objet, $contenu, $header); // Si le mail part
+                        ?>
+                    <?php   
+                    }
+                   
 //===================================================================================================================
 
             } else { // S'il y a un moins une erreur on récupère le total de la variable $nombreErreur et on envoi le message correspondant
@@ -133,8 +137,15 @@ if(isset($_SESSION['user_id'])) {
             $nom = $resultat['nom'];
         ?>
         <h3 class="contact_title"> Contactez nous </h3>
+        <?php
+        if (isset($_SESSION['sended'])) {
+            if ($_SESSION['sended'] == 1) {
+            ?> <h3 class="form_ok" align="center">Le formulaire a bien été envoyé</h3> <?php
+            }
+        }
+        ?>
         <div class="warning">
-            Merci de remplir tout les champs pour que formulaire puisse partir.
+            * Merci de remplir tout les champs pour que formulaire puisse partir.
         </div>
             <div class="contact_form">
                 <div>

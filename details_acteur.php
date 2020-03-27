@@ -108,8 +108,8 @@ if(isset($_SESSION['user_id'])) {
                     
                     } else { //Si le commentaire est déjà fait on affiche un message
                         ?>
-                        <p style="color: red;">
-                            <i>Vous avez déja laissé un commentaire sur cet acteur...</i>
+                        <p style="color: green;">
+                            <i>Vous avez laissé un commentaire sur cet acteur...</i>
                         </p>
                     <?php
                     }
@@ -123,7 +123,13 @@ if(isset($_SESSION['user_id'])) {
                 $res->bindValue(':post',   $post, PDO::PARAM_STR);
                 
                 if ($res->execute()) {
+                    unset($_POST['action']);
                     ?>
+                    <form name="id_acteur" method="post" action="./details_acteur.php"> 
+                    <input type="hidden" name="id_acteur" value="<?php echo $donnees['id_acteur']; ?>" /> 
+                    </form> 
+                    <script type="text/javascript"> document.id_acteur.submit(); //on envoie le formulaire vers details_acteur.php
+                    </script>
                     <p style="color: green;">Commentaire ajouté!</p>
                     <?php
                 }
