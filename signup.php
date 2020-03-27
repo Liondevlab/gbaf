@@ -13,6 +13,9 @@ include('cookies_accept.php');
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="logo_index">
+            <p><a href="./index.php"><img src="./files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>
+        </div>
         <?php
         include('openbdd.php');
         //On vérifie si les valeur Post existent
@@ -97,9 +100,6 @@ include('cookies_accept.php');
                 $question   = $post['question'];
             } else { $question = "";}
                     ?>
-                    <div class="logo_index">
-                        <p><a href="./index.php"><img src="./files/LogoGBAF_texte.PNG" alt="Logo GBAF" /></a></p><br/>
-                    </div>
                     <p class="signup_txt">Merci d'entrer les informations suivantes pour pouvoir vous enregistrer :</p>
                     <?php
                     if ($showErrors) {
